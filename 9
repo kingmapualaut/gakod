@@ -92,17 +92,17 @@ INSTALLER PROCESS PLEASE WAIT
 TAKE TIME 5-10 MINUTE
 "
 # script
-wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/ara-rangers/vps/master/menu"
-wget -O /usr/local/bin/m "https://raw.githubusercontent.com/ara-rangers/vps/master/menu"
-wget -O /usr/local/bin/autokill "https://raw.githubusercontent.com/ara-rangers/vps/master/autokill"
-wget -O /usr/local/bin/user-generate "https://raw.githubusercontent.com/ara-rangers/vps/master/user-generate"
-wget -O /usr/local/bin/speedtest "https://raw.githubusercontent.com/ara-rangers/vps/master/speedtest"
-wget -O /usr/local/bin/user-lock "https://raw.githubusercontent.com/ara-rangers/vps/master/user-lock"
-wget -O /usr/local/bin/user-unlock "https://raw.githubusercontent.com/ara-rangers/vps/master/user-unlock"
-wget -O /usr/local/bin/auto-reboot "https://raw.githubusercontent.com/ara-rangers/vps/master/auto-reboot"
-wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/ara-rangers/vps/master/user-password"
-wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/ara-rangers/vps/master/trial"
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/ara-rangers/vps/master/common-password"
+wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/kingmapualaut/gakod/main/menu"
+wget -O /usr/local/bin/m "https://raw.githubusercontent.com/kingmapualaut/gakod/main/menu"
+wget -O /usr/local/bin/autokill "https://raw.githubusercontent.com/kingmapualaut/gakod/main/autokill"
+wget -O /usr/local/bin/user-generate "https://raw.githubusercontent.com/kingmapualaut/gakod/main/user-generate"
+wget -O /usr/local/bin/speedtest "https://raw.githubusercontent.com/kingmapualaut/gakod/main/speedtest"
+wget -O /usr/local/bin/user-lock "https://raw.githubusercontent.com/kingmapualaut/gakod/main/user-lock"
+wget -O /usr/local/bin/user-unlock "https://raw.githubusercontent.com/kingmapualaut/gakod/main/user-unlock"
+wget -O /usr/local/bin/auto-reboot "https://raw.githubusercontent.com/kingmapualaut/gakod/main/auto-reboot"
+wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/kingmapualaut/gakod/main/user-password"
+wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/kingmapualaut/gakod/main/trial"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/kingmapualaut/gakod/main/common-password"
 chmod +x /etc/pam.d/common-password
 chmod +x /usr/local/bin/menu
 chmod +x /usr/local/bin/m
@@ -129,7 +129,7 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 # ssh
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
-wget -O /etc/issue.net "https://raw.githubusercontent.com/ara-rangers/vps/master/banner"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/kingmapualaut/gakod/main/banner"
 
 # setting port ssh
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
@@ -248,7 +248,7 @@ echo "1 8 * * * /usr/local/bin/lockidexp.sh" >> mycron
 crontab mycron
 rm mycron
 # BlockTorrent
-wget -O /usr/local/bin/BlockTorrentEveryReboot "https://raw.githubusercontent.com/ara-rangers/vps/master/BlockTorrentEveryReboot"
+wget -O /usr/local/bin/BlockTorrentEveryReboot "https://raw.githubusercontent.com/kingmapualaut/gakod/main/BlockTorrentEveryReboot"
 chmod +x /usr/local/bin/BlockTorrentEveryReboot
 crontab -l > mycron
 echo "@reboot /usr/local/bin/BlockTorrentEveryReboot" >> mycron
